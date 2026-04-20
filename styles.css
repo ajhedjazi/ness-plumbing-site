@@ -142,6 +142,7 @@ button { display: block; }
   opacity: 1;
 }
 #services,
+#work,
 #why,
 #book,
 #faq {
@@ -149,6 +150,89 @@ button { display: block; }
 }
 #services {
   scroll-margin-top: 132px;
+}
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background: #050505;
+  text-align: left;
+  width: 100%;
+}
+.work-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 4px solid #ffffff;
+}
+.work-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.42));
+}
+.work-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+.work-card-image-left { object-position: left center; }
+.work-card-image-center { object-position: center center; }
+.work-card-image-right { object-position: right center; }
+.work-card-image-detail { object-position: 72% center; }
+.work-card-copy {
+  padding: 1.5rem;
+}
+.lightbox-open {
+  overflow: hidden;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+}
+.lightbox-panel {
+  position: relative;
+  z-index: 1;
+  width: min(960px, calc(100vw - 2rem));
+  margin: 2rem auto;
+  background: #0b0b0b;
+  border: 4px solid #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #ffffff;
+  background: #0b0b0b;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.lightbox-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 4px solid #ffffff;
+}
+.lightbox-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.lightbox-copy {
+  padding: 1.5rem;
 }
 .footer-logo {
   display: block;
@@ -179,6 +263,7 @@ button { display: block; }
     padding-bottom: 88px;
   }
   #services,
+  #work,
   #why,
   #book,
   #faq {
@@ -186,6 +271,19 @@ button { display: block; }
   }
   #services {
     scroll-margin-top: 112px;
+  }
+  .lightbox-panel {
+    width: calc(100vw - 1rem);
+    margin: 0.5rem auto;
+  }
+  .lightbox-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .lightbox-copy {
+    padding: 1rem;
   }
   .hero-van-bg {
     background:
