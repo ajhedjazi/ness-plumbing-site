@@ -1,0 +1,130 @@
+html { -webkit-text-size-adjust: 100%; }
+body,
+p,
+span,
+li,
+label,
+small,
+strong,
+em,
+input,
+select,
+textarea {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+a,
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  font-family: inherit;
+  font-weight: inherit;
+}
+input, select, button { box-sizing: border-box; width: 100%; max-width: 100%; }
+input, select { min-height: 56px; }
+button { display: block; }
+
+.accent-bg { background-color: #F97316; }
+.secondary-bg { background-color: #C46A2D; }
+.bg-deep-black { background-color: #0B0B0B; }
+.text-accent { color: #F97316; }
+.text-secondary { color: #C46A2D; }
+.border-accent { border-color: #F97316; }
+.skew-box { transform: skewX(-4deg); }
+
+.trust-strip {
+  background:
+    linear-gradient(180deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0) 58%),
+    #0B0B0B;
+  box-shadow: inset 0 4px 0 #F97316;
+}
+.trust-pill {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+.brand-logo {
+  display: block;
+  width: 210px;
+  height: auto;
+  max-height: 88px;
+  object-fit: contain;
+}
+.brand-mark {
+  width: 210px;
+  min-height: 88px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.footer-logo {
+  display: block;
+  width: 220px;
+  height: auto;
+  max-width: 100%;
+  opacity: 0.94;
+}
+.trust-strip span {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+@media (min-width: 640px) {
+  .trust-strip span {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+  }
+}
+@media (max-width: 639px) {
+  body {
+    padding-bottom: 88px;
+  }
+  .brand-logo {
+    width: 148px;
+    max-height: 62px;
+  }
+  .brand-mark {
+    width: 148px;
+    min-height: 62px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .footer-logo {
+    width: 180px;
+  }
+  .trust-strip span {
+    font-size: 0.65rem;
+    padding: 0.45rem 0.65rem;
+    white-space: normal;
+    line-height: 1.15;
+    width: 100%;
+  }
+}
+.mobile-sticky-cta {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+}
+.mobile-menu { display: none; }
+.mobile-menu.show { display: block; }

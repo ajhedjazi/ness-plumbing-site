@@ -19,132 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { -webkit-text-size-adjust: 100%; }
-    body,
-    p,
-    span,
-    li,
-    label,
-    small,
-    strong,
-    em,
-    input,
-    select,
-    textarea {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-    }
-    a,
-    button {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-    }
-    h1 span,
-    h2 span,
-    h3 span,
-    h4 span,
-    h5 span,
-    h6 span {
-      font-family: inherit;
-      font-weight: inherit;
-    }
-    input, select, button { box-sizing: border-box; width: 100%; max-width: 100%; }
-    input, select { min-height: 56px; }
-    button { display: block; }
-    .accent-bg { background-color: #F97316; }
-    .secondary-bg { background-color: #C46A2D; }
-    .skew-box { transform: skewX(-4deg); }
-    .trust-strip {
-      background:
-        linear-gradient(180deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0) 58%),
-        #0B0B0B;
-      box-shadow: inset 0 4px 0 #F97316;
-    }
-    .trust-pill {
-      background-color: rgba(255, 255, 255, 0.08);
-      border: 2px solid rgba(255, 255, 255, 0.16);
-    }
-    .brand-logo {
-      display: block;
-      width: 210px;
-      height: auto;
-      max-height: 88px;
-      object-fit: contain;
-    }
-    .brand-mark {
-      width: 210px;
-      min-height: 88px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding-top: 6px;
-      padding-bottom: 6px;
-    }
-    .footer-logo {
-      display: block;
-      width: 220px;
-      height: auto;
-      max-width: 100%;
-      opacity: 0.94;
-    }
-    .trust-strip span {
-      background-color: rgba(255, 255, 255, 0.08);
-      border: 2px solid rgba(255, 255, 255, 0.16);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.55rem 0.95rem;
-      font-size: 0.75rem;
-      line-height: 1;
-      white-space: nowrap;
-    }
-    @media (min-width: 640px) {
-      .trust-strip span {
-        font-size: 0.75rem;
-        letter-spacing: 0.14em;
-      }
-    }
-    @media (max-width: 639px) {
-      body {
-        padding-bottom: 88px;
-      }
-      .brand-logo {
-        width: 148px;
-        max-height: 62px;
-      }
-      .brand-mark {
-        width: 148px;
-        min-height: 62px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-      }
-      .footer-logo {
-        width: 180px;
-      }
-      .trust-strip span {
-        font-size: 0.65rem;
-        padding: 0.45rem 0.65rem;
-        white-space: normal;
-        line-height: 1.15;
-        width: 100%;
-      }
-    }
-    .mobile-sticky-cta {
-      padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
-    }
-    .mobile-menu { display: none; }
-    .mobile-menu.show { display: block; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -276,16 +151,16 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-0 flex flex-col md:flex-row items-stretch">
     <!-- Left: Big headline -->
     <div class="flex-1 flex flex-col justify-center border-r-0 md:border-r-4 border-white py-12 md:py-24 pr-0 md:pr-16">
-      <div class="border-4 border-white inline-block px-3 py-1 mb-6 w-fit" style="background-color:#F97316;">
+      <div class="border-4 border-white inline-block px-3 py-1 mb-6 w-fit accent-bg">
         <span class="text-black font-black uppercase text-xs tracking-widest">AIR SOURCE, EMERGENCY & GENERAL PLUMBING</span>
       </div>
       <h1 class="text-white font-black uppercase leading-none text-3xl sm:text-5xl lg:text-7xl xl:text-8xl tracking-tighter">
         EMERGENCY<br>
         PLUMBING.<br>
-        <span style="color:#F97316;">BOILER</span><br>
-        <span style="color:#F97316;">REPAIRS.</span>
+        <span class="text-accent">BOILER</span><br>
+        <span class="text-accent">REPAIRS.</span>
       </h1>
-      <div class="mt-8 border-l-8 pl-6" style="border-color:#F97316;">
+      <div class="mt-8 border-l-8 pl-6 border-accent">
         <p class="text-white text-lg sm:text-xl font-bold uppercase tracking-wide leading-relaxed">
           AIR SOURCE HEAT PUMP SERVICING,<br>
           EMERGENCY PLUMBING, GENERAL PLUMBING<br>
@@ -306,19 +181,19 @@
     </div>
     <!-- Right: Stats block -->
     <div class="w-full md:w-80 lg:w-96 flex flex-col border-t-4 md:border-t-0 md:border-l-0 border-white mt-8 md:mt-0 md:-translate-y-6">
-      <div class="flex-1 border-b-4 border-white p-8 flex flex-col justify-center" style="background-color:#F97316;">
+      <div class="flex-1 border-b-4 border-white p-8 flex flex-col justify-center accent-bg">
         <div class="text-black font-black text-6xl lg:text-7xl uppercase leading-none">24/7</div>
         <div class="text-black font-black text-sm uppercase tracking-widest mt-2">EMERGENCY AVAILABILITY</div>
         <div class="text-black font-bold text-xs uppercase tracking-wide mt-1 opacity-70">FAST RESPONSE FOR URGENT PLUMBING ISSUES</div>
       </div>
       <div class="flex-1 border-b-4 border-white p-8 flex flex-col justify-center bg-white">
         <div class="text-black font-black text-6xl lg:text-7xl uppercase leading-none">HU1</div>
-        <div class="font-black text-sm uppercase tracking-widest mt-2" style="color:#C46A2D;">TO HU15 COVERED</div>
+        <div class="font-black text-sm uppercase tracking-widest mt-2 text-secondary">TO HU15 COVERED</div>
         <div class="text-gray-600 font-bold text-xs uppercase tracking-wide mt-1">PLUS BEVERLEY, HESSLE, COTTINGHAM, BROUGH AND MORE</div>
       </div>
       <div class="flex-1 p-8 flex flex-col justify-center bg-black border-t-4 border-white">
         <div class="text-white font-black text-6xl lg:text-7xl uppercase leading-none">TAPS</div>
-        <div class="font-black text-sm uppercase tracking-widest mt-2" style="color:#F97316;">SHOWERS, TOILETS & LEAKS</div>
+        <div class="font-black text-sm uppercase tracking-widest mt-2 text-accent">SHOWERS, TOILETS & LEAKS</div>
         <div class="text-gray-500 font-bold text-xs uppercase tracking-wide mt-1">GENERAL PLUMBING REPAIRS, INSTALLS AND WATER PRESSURE FIXES</div>
       </div>
     </div>
@@ -330,7 +205,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="border-b-4 border-black py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <h2 class="font-black uppercase text-3xl sm:text-4xl lg:text-5xl tracking-tighter text-black leading-none">WHAT WE FIX</h2>
-      <div class="border-4 border-black px-4 py-2" style="background-color:#C46A2D;">
+      <div class="border-4 border-black px-4 py-2 secondary-bg">
         <span class="text-white font-black uppercase text-sm tracking-widest">ALL JOBS GUARANTEED</span>
       </div>
     </div>
@@ -341,7 +216,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black group-hover:text-white mb-3">EMERGENCY PLUMBING</h3>
         <p class="font-bold text-gray-600 group-hover:text-gray-300 uppercase text-sm tracking-wide leading-relaxed">FAST RESPONSE FOR URGENT LEAKS, BURST PIPES AND WATER ISSUES TO HELP PREVENT DAMAGE TO YOUR HOME.</p>
         <div class="mt-6 border-t-4 border-black group-hover:border-white pt-4">
-          <span class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">URGENT CALL-OUTS →</span>
+          <span class="font-black uppercase text-xs tracking-widest text-accent">URGENT CALL-OUTS →</span>
         </div>
       </div>
       <!-- Card 2 -->
@@ -350,7 +225,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black group-hover:text-white mb-3">BOILER REPAIRS</h3>
         <p class="font-bold text-gray-600 group-hover:text-gray-300 uppercase text-sm tracking-wide leading-relaxed">FAULT FINDING AND REPAIRS FOR COMBI, SYSTEM AND CONVENTIONAL BOILERS ACROSS HULL AND EAST YORKSHIRE.</p>
         <div class="mt-6 border-t-4 border-black group-hover:border-white pt-4">
-          <span class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">DIAGNOSE & REPAIR →</span>
+          <span class="font-black uppercase text-xs tracking-widest text-accent">DIAGNOSE & REPAIR →</span>
         </div>
       </div>
       <!-- Card 3 -->
@@ -359,7 +234,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black group-hover:text-white mb-3">LEAKING TAPS & PIPES</h3>
         <p class="font-bold text-gray-600 group-hover:text-gray-300 uppercase text-sm tracking-wide leading-relaxed">DRIPPING TAPS, DAMAGED PIPEWORK AND HIDDEN LEAKS FIXED QUICKLY TO CUT WASTE AND PREVENT PROPERTY DAMAGE.</p>
         <div class="mt-6 border-t-4 border-black group-hover:border-white pt-4">
-          <span class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">LEAK REPAIRS →</span>
+          <span class="font-black uppercase text-xs tracking-widest text-accent">LEAK REPAIRS →</span>
         </div>
       </div>
       <!-- Card 4 -->
@@ -368,7 +243,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black group-hover:text-white mb-3">BOILER SERVICING</h3>
         <p class="font-bold text-gray-600 group-hover:text-gray-300 uppercase text-sm tracking-wide leading-relaxed">ANNUAL SERVICING TO KEEP YOUR HEATING SAFE, EFFICIENT AND RUNNING PROPERLY ALL YEAR ROUND.</p>
         <div class="mt-6 border-t-4 border-black group-hover:border-white pt-4">
-          <span class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">ANNUAL MAINTENANCE →</span>
+          <span class="font-black uppercase text-xs tracking-widest text-accent">ANNUAL MAINTENANCE →</span>
         </div>
       </div>
       <!-- Card 5 -->
@@ -377,7 +252,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black group-hover:text-white mb-3">TOILETS & SHOWERS</h3>
         <p class="font-bold text-gray-600 group-hover:text-gray-300 uppercase text-sm tracking-wide leading-relaxed">TOILET REPAIRS, REPLACEMENTS, SHOWER REPAIRS AND NEW INSTALLATIONS CARRIED OUT CLEANLY AND PROFESSIONALLY.</p>
         <div class="mt-6 border-t-4 border-black group-hover:border-white pt-4">
-          <span class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">BATHROOM FIXES →</span>
+          <span class="font-black uppercase text-xs tracking-widest text-accent">BATHROOM FIXES →</span>
         </div>
       </div>
       <!-- Card 6 -->
@@ -386,7 +261,7 @@
         <h3 class="font-black uppercase text-2xl tracking-tight text-black mb-3">HEAT PUMPS & CP12</h3>
         <p class="font-bold text-gray-600 uppercase text-sm tracking-wide leading-relaxed">AIR SOURCE HEAT PUMP SERVICING AND REPAIRS, PLUS LANDLORD GAS SAFETY CERTIFICATES AND DIAGNOSTICS.</p>
         <div class="mt-6">
-          <a href="tel:+441482722677" class="border-4 block text-center font-black uppercase text-sm tracking-widest px-4 py-4 hover:bg-black hover:text-white transition-none" style="border-color:#F97316;color:#F97316;">
+          <a href="tel:+441482722677" class="border-4 border-accent block text-center font-black uppercase text-sm tracking-widest px-4 py-4 text-accent hover:bg-black hover:text-white transition-none">
             📞 FREE PHONE DIAGNOSIS
           </a>
         </div>
@@ -401,19 +276,19 @@
     <div class="flex flex-col lg:flex-row gap-0">
       <!-- Left headline -->
       <div class="lg:w-1/2 border-b-4 lg:border-b-0 lg:border-r-4 border-white pb-12 lg:pb-0 lg:pr-16">
-        <span class="font-black uppercase text-xs tracking-widest mb-6 block" style="color:#F97316;">// WHY VIKING PLUMBING & HEATING?</span>
+        <span class="font-black uppercase text-xs tracking-widest mb-6 block text-accent">// WHY VIKING PLUMBING & HEATING?</span>
         <h2 class="text-white font-black uppercase leading-none text-4xl sm:text-5xl lg:text-6xl tracking-tighter">
           FAST.<br>
           PROFESSIONAL.<br>
-          <span style="color:#F97316;">RELIABLE.</span>
+          <span class="text-accent">RELIABLE.</span>
         </h2>
         <div class="mt-10 border-4 border-white p-6">
           <p class="text-white font-bold uppercase text-sm tracking-wide leading-loose">
             OUR FOCUS IS SIMPLE — RAPID RESPONSE EMERGENCY PLUMBING, EXPERT BOILER REPAIRS, ENERGY-EFFICIENT INSTALLATIONS AND FULLY COMPLIANT GAS SAFE SERVICES.
           </p>
-          <p class="mt-4 font-black uppercase text-xs tracking-widest" style="color:#C46A2D;">SERVING HULL & EAST YORKSHIRE</p>
+          <p class="mt-4 font-black uppercase text-xs tracking-widest text-secondary">SERVING HULL & EAST YORKSHIRE</p>
         </div>
-        <div class="mt-8 border-4 p-4" style="background-color:#F97316;border-color:#F97316;">
+        <div class="mt-8 border-4 p-4 accent-bg border-accent">
           <p class="text-black font-black uppercase text-sm tracking-wide">24/7 EMERGENCY AVAILABILITY &nbsp;|&nbsp; TRANSPARENT PRICING &nbsp;|&nbsp; GAS SAFE SERVICES</p>
         </div>
       </div>
@@ -421,22 +296,22 @@
       <div class="lg:w-1/2 lg:pl-16 pt-12 lg:pt-0">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-0">
           <div class="border-b-4 border-r-0 sm:border-r-4 border-white p-6">
-            <div class="font-black text-3xl" style="color:#F97316;">01</div>
+            <div class="font-black text-3xl text-accent">01</div>
             <div class="font-black uppercase text-base tracking-tight text-white mt-2">EMERGENCY PLUMBER HULL</div>
             <p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">FAST RESPONSE FOR BURST PIPES, LEAKS, WATER ISSUES AND NO HOT WATER CALL-OUTS.</p>
           </div>
           <div class="border-b-4 border-white p-6">
-            <div class="font-black text-3xl" style="color:#F97316;">02</div>
+            <div class="font-black text-3xl text-accent">02</div>
             <div class="font-black uppercase text-base tracking-tight text-white mt-2">BOILER REPAIR SPECIALIST</div>
             <p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">FAULT FINDING, REPAIRS, SERVICING AND NEW ENERGY-EFFICIENT BOILER INSTALLATIONS.</p>
           </div>
           <div class="border-b-4 sm:border-b-0 border-r-0 sm:border-r-4 border-white p-6">
-            <div class="font-black text-3xl" style="color:#F97316;">03</div>
+            <div class="font-black text-3xl text-accent">03</div>
             <div class="font-black uppercase text-base tracking-tight text-white mt-2">CERTIFIED GAS SERVICES</div>
             <p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">CP12 LANDLORD SAFETY CHECKS, BOILER WORK AND GAS COMPLIANCE FOR HOMES AND RENTALS.</p>
           </div>
           <div class="border-t-0 sm:border-t-0 p-6 border-t-4 border-white">
-            <div class="font-black text-3xl" style="color:#F97316;">04</div>
+            <div class="font-black text-3xl text-accent">04</div>
             <div class="font-black uppercase text-base tracking-tight text-white mt-2">HEAT PUMP & HEATING</div>
             <p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">AIR SOURCE HEAT PUMP SERVICING, REPAIRS, RADIATORS, POWERFLUSHING AND HEATING DIAGNOSTICS.</p>
           </div>
@@ -464,23 +339,23 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       <div class="border-r-0 sm:border-r-4 border-black p-8 flex flex-col">
-        <div class="font-black text-xl mb-4" style="color:#F97316;">EMERGENCY</div>
+        <div class="font-black text-xl mb-4 text-accent">EMERGENCY</div>
         <p class="font-bold uppercase text-sm tracking-wide text-gray-700 leading-relaxed">FAST RESPONSE EMERGENCY PLUMBING FOR URGENT LEAKS, BURST PIPES AND WATER ISSUES TO HELP LIMIT DAMAGE.</p>
         <div class="mt-auto pt-6 border-t-2 border-black">
           <div class="font-black uppercase text-xs tracking-widest">RAPID RESPONSE</div>
           <div class="font-bold uppercase text-xs tracking-wider text-gray-500">HULL & EAST YORKSHIRE CALL-OUTS</div>
         </div>
       </div>
-      <div class="border-r-0 lg:border-r-4 border-black p-8 flex flex-col" style="background-color:#0B0B0B;">
-        <div class="font-black text-xl mb-4" style="color:#F97316;">BOILERS</div>
+      <div class="border-r-0 lg:border-r-4 border-black p-8 flex flex-col bg-deep-black">
+        <div class="font-black text-xl mb-4 text-accent">BOILERS</div>
         <p class="font-bold uppercase text-sm tracking-wide text-gray-300 leading-relaxed">BOILER REPAIRS, BOILER SERVICING, NEW INSTALLATIONS AND FAULT FINDING FOR COMBI, SYSTEM AND CONVENTIONAL SETUPS.</p>
         <div class="mt-auto pt-6 border-t-2 border-white">
           <div class="font-black uppercase text-xs tracking-widest text-white">HEATING SPECIALIST</div>
-          <div class="font-bold uppercase text-xs tracking-wider" style="color:#C46A2D;">REPAIRS, SERVICING & INSTALLS</div>
+          <div class="font-bold uppercase text-xs tracking-wider text-secondary">REPAIRS, SERVICING & INSTALLS</div>
         </div>
       </div>
       <div class="border-black p-8 flex flex-col">
-        <div class="font-black text-xl mb-4" style="color:#F97316;">HEAT PUMPS</div>
+        <div class="font-black text-xl mb-4 text-accent">HEAT PUMPS</div>
         <p class="font-bold uppercase text-sm tracking-wide text-gray-700 leading-relaxed">AIR SOURCE HEAT PUMP SERVICING AND REPAIRS, PLUS RADIATORS, POWERFLUSHING, MAGNETIC FILTERS AND WATER PRESSURE WORK.</p>
         <div class="mt-auto pt-6 border-t-2 border-black">
           <div class="font-black uppercase text-xs tracking-widest">FULL SYSTEM SUPPORT</div>
@@ -492,7 +367,7 @@
 </section>
 
 <!-- BOOK CTA -->
-<section id="book" class="border-t-8 border-black" style="background-color:#F97316;">
+<section id="book" class="border-t-8 border-black accent-bg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0">
     <div class="flex flex-col lg:flex-row items-stretch">
       <!-- Left: CTA copy -->
@@ -551,7 +426,7 @@
             <label class="block font-black uppercase text-xs tracking-widest text-white mb-2">POSTCODE *</label>
             <input type="text" placeholder="E.G. HU1 1AA" class="w-full bg-white border-4 border-white px-4 py-4 font-black uppercase text-sm tracking-wide text-black placeholder-gray-400 focus:outline-none focus:border-orange-500">
           </div>
-          <button type="submit" class="mt-6 border-4 border-white font-black uppercase text-base tracking-wider px-6 py-4 text-black hover:bg-black hover:text-white transition-none w-full" style="background-color:#F97316;border-color:#F97316;">
+          <button type="submit" class="mt-6 border-4 border-white accent-bg border-accent font-black uppercase text-base tracking-wider px-6 py-4 text-black hover:bg-black hover:text-white transition-none w-full">
             🔧 BOOK MY CALLOUT — FREE QUOTE
           </button>
           <p class="mt-4 font-bold uppercase text-xs tracking-widest text-gray-500 text-center">WE CALL BACK WITHIN 10 MINUTES. NO SPAM. EVER.</p>
@@ -632,8 +507,8 @@
             <div class="font-black uppercase text-xs tracking-widest text-gray-500">GAS SAFE NO.</div>
             <span class="font-bold uppercase text-xs tracking-wide text-gray-400">000000000</span>
           </div>
-          <div class="mt-4 border-4 p-3 text-center" style="border-color:#F97316;">
-            <div class="font-black uppercase text-xs tracking-widest" style="color:#F97316;">OPEN 24 HOURS</div>
+          <div class="mt-4 border-4 border-accent p-3 text-center">
+            <div class="font-black uppercase text-xs tracking-widest text-accent">OPEN 24 HOURS</div>
             <div class="font-black uppercase text-white text-sm">365 DAYS A YEAR</div>
           </div>
         </div>
