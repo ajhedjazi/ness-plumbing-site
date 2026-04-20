@@ -1,4 +1,8 @@
 html { -webkit-text-size-adjust: 100%; }
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
 body,
 p,
 span,
@@ -25,7 +29,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 h1 span,
 h2 span,
@@ -35,6 +39,22 @@ h5 span,
 h6 span {
   font-family: inherit;
   font-weight: inherit;
+}
+.font-black {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+.font-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+label.font-black,
+button.font-black,
+a.font-black,
+input.font-black,
+select.font-black,
+textarea.font-black {
+  font-weight: 700;
 }
 input, select, button { box-sizing: border-box; width: 100%; max-width: 100%; }
 input, select { min-height: 56px; }
@@ -53,33 +73,54 @@ button { display: block; }
   background-size: cover;
   background-position: center;
 }
-.skew-box { transform: skewX(-4deg); }
-
 .trust-strip {
   background:
     linear-gradient(180deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0) 58%),
     #0B0B0B;
   box-shadow: inset 0 4px 0 #F97316;
 }
-.trust-pill {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.16);
-}
-.brand-logo {
-  display: block;
-  width: 210px;
-  height: auto;
-  max-height: 88px;
-  object-fit: contain;
-}
 .brand-mark {
-  width: 210px;
-  min-height: 88px;
+  width: 188px;
+  min-height: 72px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  line-height: 0.92;
+}
+.brand-wordmark-top,
+.brand-wordmark-bottom {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: #111111;
+}
+.brand-wordmark-top {
+  font-size: 1.72rem;
+}
+.brand-wordmark-bottom {
+  font-size: 1.22rem;
+  letter-spacing: 0.14em;
+  color: #F97316;
+}
+.brand-wordmark-meta {
+  display: block;
+  margin-top: 0.26rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4B5563;
 }
 .footer-logo {
   display: block;
@@ -116,15 +157,21 @@ button { display: block; }
     background-size: cover;
     background-position: 62% center;
   }
-  .brand-logo {
-    width: 148px;
-    max-height: 62px;
-  }
   .brand-mark {
-    width: 148px;
+    width: 152px;
     min-height: 62px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  }
+  .brand-wordmark-top {
+    font-size: 1.35rem;
+  }
+  .brand-wordmark-bottom {
+    font-size: 1rem;
+    letter-spacing: 0.14em;
+  }
+  .brand-wordmark-meta {
+    margin-top: 0.28rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
   }
   .footer-logo {
     width: 180px;
