@@ -1,6 +1,6 @@
-# Viking Plumbing Site
+# Ness Plumbing & Heating Site
 
-Static marketing website for Viking Plumbing, focused on:
+Static marketing website for Ness Plumbing & Heating, focused on:
 
 - Air source heat pump servicing
 - Emergency plumbing
