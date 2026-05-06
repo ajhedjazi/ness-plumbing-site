@@ -102,6 +102,13 @@ button { display: block; }
   height: auto;
   display: block;
 }
+.service-icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
 .bg-black { background-color: var(--primary-navy) !important; }
 .text-black { color: var(--primary-text) !important; }
 .border-black { border-color: var(--primary-text) !important; }
