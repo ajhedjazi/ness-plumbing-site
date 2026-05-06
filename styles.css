@@ -3,6 +3,14 @@ html, body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
+:root {
+  --primary-navy: #041026;
+  --primary-text: #071021;
+  --secondary-blue: #1A4A83;
+  --accent-orange: #F97316;
+  --accent-orange-dark: #D1570B;
+  --bg-offwhite: #F7F7F4;
+}
 body,
 p,
 span,
@@ -60,12 +68,12 @@ input, select, button { box-sizing: border-box; width: 100%; max-width: 100%; }
 input, select { min-height: 56px; }
 button { display: block; }
 
-.accent-bg { background-color: #F97316; }
-.secondary-bg { background-color: #C46A2D; }
-.bg-deep-black { background-color: #0B0B0B; }
-.text-accent { color: #F97316; }
-.text-secondary { color: #C46A2D; }
-.border-accent { border-color: #F97316; }
+.accent-bg { background-color: var(--accent-orange); }
+.secondary-bg { background-color: var(--secondary-blue); }
+.bg-deep-black { background-color: var(--primary-navy); }
+.text-accent { color: var(--accent-orange); }
+.text-secondary { color: var(--secondary-blue); }
+.border-accent { border-color: var(--accent-orange); }
 .hero-van-bg {
   background:
     linear-gradient(90deg, rgba(11, 11, 11, 0.9) 0%, rgba(11, 11, 11, 0.76) 42%, rgba(11, 11, 11, 0.78) 100%),
@@ -76,8 +84,8 @@ button { display: block; }
 .trust-strip {
   background:
     linear-gradient(180deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0) 58%),
-    #0B0B0B;
-  box-shadow: inset 0 4px 0 #F97316;
+    var(--primary-navy);
+  box-shadow: inset 0 4px 0 var(--accent-orange);
 }
 .brand-mark {
   width: 188px;
@@ -88,6 +96,16 @@ button { display: block; }
   text-decoration: none;
   color: inherit;
 }
+.header-logo {
+  width: 188px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.bg-black { background-color: var(--primary-navy) !important; }
+.text-black { color: var(--primary-text) !important; }
+.border-black { border-color: var(--primary-text) !important; }
+.bg-white { background-color: var(--bg-offwhite) !important; }
 .brand-wordmark {
   display: flex;
   flex-direction: column;
@@ -102,7 +120,7 @@ button { display: block; }
   font-weight: 900;
   letter-spacing: -0.06em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--primary-text);
 }
 .brand-wordmark-top {
   font-size: 1.72rem;
@@ -203,7 +221,7 @@ button { display: block; }
   z-index: 1;
   width: min(960px, calc(100vw - 2rem));
   margin: 2rem auto;
-  background: #0b0b0b;
+  background: var(--primary-navy);
   border: 4px solid #ffffff;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
