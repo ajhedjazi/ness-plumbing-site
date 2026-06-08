@@ -66,9 +66,9 @@
 <body class="bg-white text-black antialiased">
 
 <header class="bg-white border-b-4 border-black sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap md:flex-nowrap items-stretch justify-between min-h-[78px] sm:min-h-[84px]">
-      <div class="flex items-center border-r-4 border-black pr-3 sm:pr-6">
+  <div class="site-container">
+    <div class="header-layout flex flex-wrap items-stretch justify-between min-h-[78px] sm:min-h-[84px]">
+      <div class="header-brand flex items-center border-r-4 border-black pr-3 sm:pr-6">
         <a href="#top" aria-label="Hull Drain Response home" class="brand-mark">
           <span class="brand-wordmark">
             <span class="brand-wordmark-top">Hull Drain</span>
@@ -76,15 +76,15 @@
           </span>
         </a>
       </div>
-      <nav class="hidden md:flex items-center gap-1 px-2" aria-label="Main navigation">
+      <nav class="header-nav items-center gap-1 px-2" aria-label="Main navigation">
         <a href="#about" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">About</a>
         <a href="#services" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">Drain Services</a>
         <a href="#areas" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">Areas Covered</a>
         <a href="#faq" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">FAQs</a>
         <a href="#contact" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">Contact</a>
       </nav>
-      <button id="navToggle" type="button" class="md:hidden ml-auto flex items-center justify-center w-20 h-11 border-4 border-black text-black font-black uppercase tracking-widest hover:bg-black hover:text-white" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">Menu</button>
-      <a href="#contact" class="js-phone-link order-3 md:order-none w-full md:w-auto justify-center flex items-center px-5 sm:px-6 py-3 md:py-0 accent-bg border-t-4 md:border-t-0 md:border-l-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white">Call Now</a>
+      <button id="navToggle" type="button" class="header-menu-toggle ml-auto items-center justify-center w-20 h-11 border-4 border-black text-black font-black uppercase tracking-widest hover:bg-black hover:text-white" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">Menu</button>
+      <a href="#contact" class="header-call js-phone-link justify-center flex items-center px-5 sm:px-6 py-3 accent-bg border-t-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white">Call Now</a>
     </div>
     <nav id="mobileMenu" class="mobile-menu md:hidden border-t-4 border-black mt-2" aria-label="Mobile navigation">
       <div class="flex flex-col">
@@ -99,8 +99,8 @@
 </header>
 
 <div class="trust-strip border-b-4 border-black py-4">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center sm:justify-between gap-2 text-center">
+  <div class="site-container">
+    <div class="trust-strip-layout text-center">
       <span class="text-white font-black uppercase tracking-widest">Urgent Drain Help</span>
       <span class="text-white font-black uppercase tracking-widest">Blocked Toilets</span>
       <span class="text-white font-black uppercase tracking-widest">Outside Drains</span>
@@ -112,8 +112,8 @@
 
 <main id="top">
   <section class="hero-drain-bg flex items-stretch">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-stretch">
-      <div class="flex-1 flex flex-col justify-center border-r-0 md:border-r-4 border-white py-14 md:py-20 pr-0 md:pr-16">
+    <div class="site-container hero-layout">
+      <div class="hero-copy flex flex-col justify-center">
         <p class="font-black uppercase text-xs tracking-[0.2em] text-accent mb-6">// Emergency Blocked Drains Hull</p>
         <h1 class="text-white font-black uppercase leading-[0.9] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tighter">
           Emergency<br><span class="text-accent">Blocked<span class="sm:hidden"><br></span> Drains.</span><br>Hull.
@@ -127,16 +127,16 @@
         </div>
         <p class="mt-6 text-gray-400 uppercase text-xs tracking-widest font-bold">Drains &bull; Toilets &bull; Sinks &bull; Hull &amp; Nearby Areas</p>
       </div>
-      <div class="w-full md:w-80 lg:w-96 flex flex-col border-t-4 md:border-t-0 border-white">
-        <div class="flex-1 border-b-4 border-white p-8 flex flex-col justify-center accent-bg min-h-[180px]">
+      <div class="hero-panels flex flex-col border-white">
+        <div class="hero-panel flex-1 border-b-4 border-white p-8 flex flex-col justify-center accent-bg min-h-[180px]">
           <div class="text-black font-black text-4xl lg:text-5xl uppercase leading-none">Fast<br>Response</div>
           <div class="text-black font-black text-sm uppercase tracking-widest mt-4">For urgent blocked drains and toilets</div>
         </div>
-        <div class="flex-1 border-b-4 border-white p-8 flex flex-col justify-center bg-white min-h-[180px]">
+        <div class="hero-panel flex-1 border-b-4 border-white p-8 flex flex-col justify-center bg-white min-h-[180px]">
           <div class="text-black font-black text-4xl lg:text-5xl uppercase leading-none">Hull &amp;<br>East Yorkshire</div>
           <div class="font-black text-sm uppercase tracking-widest mt-4 text-secondary">Local drainage help near you</div>
         </div>
-        <div class="flex-1 p-8 flex flex-col justify-center bg-black min-h-[180px]">
+        <div class="hero-panel flex-1 p-8 flex flex-col justify-center bg-black min-h-[180px]">
           <div class="text-white font-black text-3xl lg:text-4xl uppercase leading-none">Drains &bull; Toilets &bull; Sinks</div>
           <div class="font-black text-sm uppercase tracking-widest mt-4 text-accent">Domestic and small business call-outs</div>
         </div>
@@ -144,13 +144,13 @@
     </div>
   </section>
 
-  <section id="services" class="bg-white py-6 md:py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="border-b-4 border-black py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+  <section id="services" class="bg-white">
+    <div class="site-container section-spacer">
+      <div class="section-header-layout section-header-rule border-black">
         <h2 class="font-black uppercase text-3xl sm:text-4xl lg:text-5xl tracking-tighter text-black leading-none">What We Fix</h2>
         <div class="border-4 border-black px-4 py-2 secondary-bg"><span class="text-white font-black uppercase text-sm tracking-widest">Drainage Enquiries Across Hull</span></div>
       </div>
-      <div class="service-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="unified-grid service-grid">
         <article class="service-card border-b-4 border-black p-8 lg:p-10">
           <div class="service-icon" aria-hidden="true">🚽</div>
           <h3 class="font-black uppercase text-2xl tracking-tight text-black mb-3">Blocked Toilets</h3>
@@ -192,9 +192,9 @@
   </section>
 
   <section id="about" class="bg-black border-t-8 border-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div class="flex flex-col lg:flex-row">
-        <div class="lg:w-1/2 border-b-4 lg:border-b-0 lg:border-r-4 border-white pb-12 lg:pb-0 lg:pr-16">
+    <div class="site-container section-spacer">
+      <div class="trust-layout">
+        <div class="trust-editorial border-white">
           <span class="font-black uppercase text-xs tracking-widest mb-6 block text-accent">// Built For Urgent Drainage Problems</span>
           <h2 class="text-white font-black uppercase leading-none text-4xl sm:text-5xl lg:text-6xl tracking-tighter">Fast.<br>Local.<br><span class="text-accent">No-Nonsense.</span></h2>
           <div class="mt-10 border-4 border-white p-6">
@@ -202,14 +202,14 @@
           </div>
           <div class="mt-8 border-4 p-4 accent-bg border-accent"><p class="text-black font-black uppercase text-sm tracking-wide">Tell us the issue &bull; Add your postcode &bull; Request local drainage help</p></div>
         </div>
-        <div class="lg:w-1/2 lg:pl-16 pt-12 lg:pt-0">
-          <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="trust-reasons">
+          <div class="trust-reason-grid">
             <div class="reason-card border-b-4 border-white p-6"><div class="font-black text-3xl text-accent">01</div><h3 class="font-black uppercase text-base tracking-tight text-white mt-2">Blocked Toilets</h3><p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">Toilet not flushing, filling too high, or waste backing up.</p></div>
             <div class="reason-card border-b-4 border-white p-6"><div class="font-black text-3xl text-accent">02</div><h3 class="font-black uppercase text-base tracking-tight text-white mt-2">Outside Drains</h3><p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">Overflowing gullies, backed-up manholes, standing water or bad smells.</p></div>
             <div class="reason-card border-b-4 border-white p-6"><div class="font-black text-3xl text-accent">03</div><h3 class="font-black uppercase text-base tracking-tight text-white mt-2">Sinks &amp; Showers</h3><p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">Slow-draining kitchen sinks, washbasins, showers and baths.</p></div>
             <div class="reason-card border-b-4 border-white p-6"><div class="font-black text-3xl text-accent">04</div><h3 class="font-black uppercase text-base tracking-tight text-white mt-2">Sewage Smells / Backups</h3><p class="text-gray-400 uppercase text-xs tracking-wide mt-2 font-bold leading-relaxed">Wastewater returning, foul smells, or a suspected drainage blockage.</p></div>
           </div>
-          <div class="border-4 border-white mt-8 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="coverage-box border-white mt-8 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div><div class="text-white font-black text-4xl leading-none">HU AREA</div><div class="text-white font-black uppercase text-xs tracking-widest mt-1">Local Enquiry Coverage</div></div>
             <p class="sm:border-l-4 border-white sm:pl-6 text-gray-400 uppercase text-xs tracking-wide font-bold leading-relaxed">Hull and nearby East Yorkshire locations. Add your postcode so availability can be checked.</p>
           </div>
@@ -219,12 +219,12 @@
   </section>
 
   <section id="callouts" class="bg-white border-t-8 border-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-4 border-black pb-8">
+    <div class="site-container section-spacer-tight">
+      <div class="section-header-layout section-header-rule border-black">
         <h2 class="font-black uppercase text-3xl sm:text-4xl tracking-tighter text-black">Popular Drain Call-Outs</h2>
         <span class="font-black uppercase text-xs tracking-widest border-4 border-black px-4 py-2">Quick Issue Check</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l-4 border-black">
+      <div class="callout-grid">
         <a href="#contact" class="issue-badge">Toilet will not flush</a>
         <a href="#contact" class="issue-badge issue-badge-dark">Outside drain overflowing</a>
         <a href="#contact" class="issue-badge">Kitchen sink blocked</a>
@@ -238,12 +238,12 @@
   </section>
 
   <section id="act-quickly" class="bg-black border-t-8 border-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-4 border-white pb-8">
+    <div class="site-container section-spacer">
+      <div class="section-header-layout section-header-rule border-white">
         <h2 class="font-black uppercase text-3xl sm:text-4xl tracking-tighter text-white">Why Customers Act Quickly</h2>
         <span class="font-black uppercase text-xs tracking-widest border-4 border-white px-4 py-2 text-white">Limit Further Damage</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-l-4 border-white">
+      <div class="unified-grid action-grid">
         <article class="action-card"><span>01</span><h3>Avoid Internal Flooding</h3><p>Blocked drains can quickly lead to water or waste entering areas it should not.</p></article>
         <article class="action-card"><span>02</span><h3>Stop Sewage Smells Spreading</h3><p>Bad smells often get worse if the underlying blockage is left alone.</p></article>
         <article class="action-card"><span>03</span><h3>Protect Flooring And Carpets</h3><p>Overflowing toilets, sinks or drains can damage flooring fast.</p></article>
@@ -255,12 +255,14 @@
   </section>
 
   <section id="next-steps" class="bg-white border-t-8 border-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="border-b-4 border-black pb-8">
+    <div class="site-container section-spacer">
+      <div class="section-header-layout section-header-rule border-black">
+        <div>
         <p class="font-black uppercase text-xs tracking-widest text-accent mb-4">// Simple, Practical And Clear</p>
         <h2 class="font-black uppercase text-3xl sm:text-4xl tracking-tighter text-black">Clear Next Steps For Urgent Drainage Problems</h2>
+        </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-l-4 border-black">
+      <div class="unified-grid clarity-grid">
         <article class="clarity-card"><span>01</span><h3>Tell us what is blocked</h3></article>
         <article class="clarity-card"><span>02</span><h3>Add your postcode</h3></article>
         <article class="clarity-card"><span>03</span><h3>Request a call-back</h3></article>
@@ -272,12 +274,12 @@
   </section>
 
   <section id="areas" class="areas-bg border-t-8 border-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b-4 border-black pb-8">
+    <div class="site-container section-spacer">
+      <div class="section-header-layout section-header-rule areas-header border-black">
         <div><p class="font-black uppercase text-xs tracking-widest text-accent mb-4">// Hull And Nearby Areas</p><h2 class="font-black uppercase text-4xl sm:text-5xl tracking-tighter text-black">Areas Covered</h2></div>
         <p class="font-bold uppercase text-sm tracking-wide text-gray-700 max-w-xl leading-relaxed">Add your postcode to your enquiry so local drainage availability can be checked quickly.</p>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border-l-4 border-black">
+      <div class="area-grid">
         <span class="area-chip">Hull</span><span class="area-chip">East Hull</span><span class="area-chip">West Hull</span><span class="area-chip">North Hull</span><span class="area-chip">Anlaby</span>
         <span class="area-chip">Hessle</span><span class="area-chip">Cottingham</span><span class="area-chip">Beverley</span><span class="area-chip">Willerby</span><span class="area-chip">Kingswood</span>
         <span class="area-chip">Holderness Road Area</span><span class="area-chip">Sutton</span><span class="area-chip">Bilton</span><span class="area-chip">Hedon</span><span class="area-chip">Kirk Ella</span>
@@ -286,9 +288,9 @@
   </section>
 
   <section id="contact" class="border-t-8 border-white accent-bg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-stretch">
-        <div class="lg:w-1/2 py-16 lg:py-20 border-b-4 lg:border-b-0 lg:border-r-4 border-black pr-0 lg:pr-16">
+    <div class="site-container">
+      <div class="contact-layout">
+        <div class="contact-copy border-black">
           <span class="font-black uppercase text-xs tracking-widest text-black block mb-6">// Request Drain Help</span>
           <h2 class="font-black uppercase leading-none text-4xl sm:text-5xl lg:text-6xl tracking-tighter text-black">Blocked Drain?<br>Need Help Now?</h2>
           <p class="mt-6 font-bold text-base tracking-wide text-black leading-relaxed max-w-xl">Send the details and request a quick call-back. For urgent issues, call directly.</p>
@@ -299,7 +301,7 @@
             <div class="border-4 border-black bg-white px-4 py-3 text-center"><span class="font-black uppercase text-xs tracking-widest text-black">Request Contact</span></div>
           </div>
         </div>
-        <div class="lg:w-1/2 bg-black py-16 lg:py-20 px-0 lg:px-16 flex justify-center">
+        <div class="contact-form-panel bg-black flex justify-center">
           <form name="hull-drain-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lead-form flex flex-col items-stretch w-full max-w-xl">
             <input type="hidden" name="form-name" value="hull-drain-leads">
             <p class="honeypot-field"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
@@ -328,12 +330,12 @@
   </section>
 
   <section id="faq" class="bg-white border-t-8 border-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-4 border-black pb-8">
+    <div class="site-container section-spacer">
+      <div class="section-header-layout section-header-rule border-black">
         <h2 class="font-black uppercase text-3xl sm:text-4xl tracking-tighter text-black">FAQs</h2>
         <span class="font-black uppercase text-xs tracking-widest border-4 border-black px-4 py-2">Hull Drainage Questions</span>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 border-l-4 border-black">
+      <div class="faq-grid">
         <article class="faq-card"><h3>Do you help with blocked toilets in Hull?</h3><p>Yes, this page is for urgent blocked toilets, blocked drains, slow-draining sinks, outside drains and sewage smells across Hull and nearby areas.</p></article>
         <article class="faq-card"><h3>Is a blocked outside drain an emergency?</h3><p>It can be, especially if water or waste is backing up, overflowing, or causing smells near the property.</p></article>
         <article class="faq-card"><h3>What should I do while waiting?</h3><p>Avoid repeatedly flushing, stop running water into the blocked drain if possible, keep children and pets away from wastewater, and take photos if safe.</p></article>
@@ -343,11 +345,11 @@
     </div>
   </section>
 
-  <section class="bg-black border-t-8 border-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] border-4 border-white">
-        <div class="accent-bg p-8 sm:p-12 flex items-center"><div class="font-black uppercase text-black text-5xl sm:text-7xl leading-none tracking-tighter">Hull<br>Drain<br>Help.</div></div>
-        <div class="p-8 sm:p-12 lg:p-16">
+  <section class="bottom-trust-section bg-black border-t-8 border-white">
+    <div class="site-container section-spacer">
+      <div class="bottom-cta-layout border-white">
+        <div class="bottom-cta-accent accent-bg flex items-center"><div class="font-black uppercase text-black text-5xl sm:text-7xl leading-none tracking-tighter">Hull<br>Drain<br>Help.</div></div>
+        <div class="bottom-cta-copy">
           <p class="font-black uppercase text-xs tracking-widest text-accent mb-5">// Clear Local Enquiry Route</p>
           <h2 class="font-black uppercase text-3xl sm:text-4xl lg:text-5xl tracking-tighter text-white leading-tight">Trusted Local Enquiry Route For Blocked Drains In Hull</h2>
           <p class="mt-6 text-gray-300 text-base sm:text-lg leading-relaxed tracking-wide">Complete the form or call directly. Your details can be passed to a local drainage trade partner so they can contact you about your blocked drain, toilet, sink or outside drainage issue.</p>
@@ -359,8 +361,8 @@
 </main>
 
 <footer class="bg-black border-t-8 border-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-b-4 border-white pb-12 mb-12">
+  <div class="site-container footer-container">
+    <div class="footer-grid border-white">
       <div class="footer-cell">
         <a href="#top" aria-label="Hull Drain Response home" class="brand-wordmark brand-wordmark-dark inline-flex mb-6"><span class="brand-wordmark-top">Hull Drain</span><span class="brand-wordmark-bottom">Response</span></a>
         <p class="font-bold uppercase text-xs tracking-wide text-gray-400 leading-relaxed">Fast help for blocked drains, toilets and outside drains across Hull. Local enquiry route for sinks, sewage smells and nearby areas.</p>
