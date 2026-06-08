@@ -22,3 +22,6 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# Local task notes
+prompts/
