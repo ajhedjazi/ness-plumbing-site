@@ -302,8 +302,8 @@
           </div>
         </div>
         <div class="contact-form-panel bg-black flex justify-center">
-          <form name="hull-drain-leads" method="POST" action="/?success=true#contact" data-netlify="true" netlify-honeypot="bot-field" class="lead-form flex flex-col items-stretch w-full max-w-xl">
-            <input type="hidden" name="form-name" value="hull-drain-leads">
+          <form name="drain-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lead-form flex flex-col items-stretch w-full max-w-xl">
+            <input type="hidden" name="form-name" value="drain-enquiry">
             <p class="honeypot-field"><label>Do not fill this out if you are human: <input name="bot-field" type="text"></label></p>
             <p id="form-success" class="form-success" role="status" tabindex="-1" hidden>Thanks. Your request has been sent and a local trade partner can contact you shortly.</p>
             <div class="form-field"><label for="name">Name *</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name"></div>
@@ -399,11 +399,31 @@
     link.setAttribute("aria-label", PHONE_TEL ? `Call Hull Drain Response on ${PHONE_DISPLAY}` : "Request a drainage help call-back");
   });
 
+  const leadForm = document.querySelector('form[name="drain-enquiry"]');
   const formSuccess = document.getElementById("form-success");
 
-  if (formSuccess && new URLSearchParams(window.location.search).get("success") === "true") {
-    formSuccess.hidden = false;
-    formSuccess.focus();
+  if (leadForm && formSuccess) {
+    leadForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(leadForm)).toString()
+        });
+
+        if (!response.ok) {
+          throw new Error(`Form submission failed with status ${response.status}`);
+        }
+
+        leadForm.reset();
+        formSuccess.hidden = false;
+        formSuccess.focus();
+      } catch (error) {
+        leadForm.submit();
+      }
+    });
   }
 
   const navToggle = document.getElementById("navToggle");

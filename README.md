@@ -21,7 +21,7 @@ Use a readable number for `PHONE_DISPLAY` and the dialable international or nati
 
 ## Form Setup
 
-The contact form uses Netlify Forms with the form name `hull-drain-leads`. Form submissions can be viewed and routed from the Netlify site dashboard after deployment.
+The contact form uses Netlify Forms with the form name `drain-enquiry`. Form submissions can be viewed and routed from the Netlify site dashboard after deployment.
 
 ## Local Preview
 
