@@ -638,6 +638,16 @@ header.border-b-4,
   max-width: 520px;
 }
 
+.form-success {
+  margin-bottom: 1.25rem;
+  border: var(--global-border-width) solid var(--accent-orange);
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
 .lead-form label {
   display: block;
   margin-bottom: 0.5rem;

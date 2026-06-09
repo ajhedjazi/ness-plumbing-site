@@ -302,9 +302,10 @@
           </div>
         </div>
         <div class="contact-form-panel bg-black flex justify-center">
-          <form name="hull-drain-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lead-form flex flex-col items-stretch w-full max-w-xl">
+          <form name="hull-drain-leads" method="POST" action="/?success=true#contact" data-netlify="true" netlify-honeypot="bot-field" class="lead-form flex flex-col items-stretch w-full max-w-xl">
             <input type="hidden" name="form-name" value="hull-drain-leads">
-            <p class="honeypot-field"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+            <p class="honeypot-field"><label>Do not fill this out if you are human: <input name="bot-field" type="text"></label></p>
+            <p id="form-success" class="form-success" role="status" tabindex="-1" hidden>Thanks. Your request has been sent and a local trade partner can contact you shortly.</p>
             <div class="form-field"><label for="name">Name *</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name"></div>
             <div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></div>
             <div class="form-field"><label for="postcode">Postcode *</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required placeholder="E.g. HU1 1AA"></div>
@@ -397,6 +398,13 @@
     link.href = PHONE_TEL ? `tel:${PHONE_TEL}` : "#contact";
     link.setAttribute("aria-label", PHONE_TEL ? `Call Hull Drain Response on ${PHONE_DISPLAY}` : "Request a drainage help call-back");
   });
+
+  const formSuccess = document.getElementById("form-success");
+
+  if (formSuccess && new URLSearchParams(window.location.search).get("success") === "true") {
+    formSuccess.hidden = false;
+    formSuccess.focus();
+  }
 
   const navToggle = document.getElementById("navToggle");
   const mobileMenu = document.getElementById("mobileMenu");
