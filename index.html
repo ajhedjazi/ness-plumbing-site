@@ -84,7 +84,7 @@
         <a href="#contact" class="nav-link uppercase text-xs font-black tracking-wider px-3 lg:px-4 py-2 text-black">Contact</a>
       </nav>
       <button id="navToggle" type="button" class="header-menu-toggle ml-auto items-center justify-center w-20 h-11 border-4 border-black text-black font-black uppercase tracking-widest hover:bg-black hover:text-white" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">Menu</button>
-      <a href="#contact" class="header-call js-phone-link justify-center flex items-center px-5 sm:px-6 py-3 accent-bg border-t-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white">Request Call Back</a>
+      <a href="tel:+447549731381" class="header-call js-phone-link justify-center flex items-center px-5 sm:px-6 py-3 accent-bg border-t-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white">Call Now</a>
     </div>
     <nav id="mobileMenu" class="mobile-menu md:hidden border-t-4 border-black mt-2" aria-label="Mobile navigation">
       <div class="flex flex-col">
@@ -122,10 +122,11 @@
           <p class="text-white text-base sm:text-xl font-bold tracking-wide leading-relaxed">Blocked toilet, overflowing outside drain, slow-draining sink or sewage smell? Request fast local drainage help across Hull and nearby areas.</p>
         </div>
         <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="js-phone-link phone-cta accent-bg border-4 border-white text-black font-black uppercase text-sm sm:text-base px-6 sm:px-8 py-5 tracking-wider hover:bg-white text-center" aria-label="Get drain help now">Get Drain Help Now</a>
+          <a href="#contact" class="phone-cta accent-bg border-4 border-white text-black font-black uppercase text-sm sm:text-base px-6 sm:px-8 py-5 tracking-wider hover:bg-white text-center" aria-label="Get drain help now">Get Drain Help Now</a>
           <a href="#contact" class="border-4 border-white text-white font-black uppercase text-sm sm:text-base px-6 sm:px-8 py-5 tracking-wider hover:bg-white hover:text-black text-center">Request Call Back</a>
         </div>
-        <p class="mt-6 text-gray-400 uppercase text-xs tracking-widest font-bold">Drains &bull; Toilets &bull; Sinks &bull; Hull &amp; Nearby Areas</p>
+        <p class="mt-6 text-gray-400 uppercase text-xs tracking-widest font-bold"><a href="tel:+447549731381" class="text-white hover:text-accent" aria-label="Call now on +44 7549 731381">Call now: +44 7549 731381</a></p>
+        <p class="mt-3 text-gray-400 uppercase text-xs tracking-widest font-bold">Drains &bull; Toilets &bull; Sinks &bull; Hull &amp; Nearby Areas</p>
       </div>
       <div class="hero-panels flex flex-col border-white">
         <div class="hero-panel flex-1 border-b-4 border-white p-8 flex flex-col justify-center accent-bg min-h-[180px]">
@@ -294,7 +295,7 @@
           <span class="font-black uppercase text-xs tracking-widest text-black block mb-6">// Request Drain Help</span>
           <h2 class="font-black uppercase leading-none text-4xl sm:text-5xl lg:text-6xl tracking-tighter text-black">Blocked Drain?<br>Request a Call-Back Now.</h2>
           <p class="mt-6 font-bold text-base tracking-wide text-black leading-relaxed max-w-xl">Tell us what has happened and we will ask a local drainage specialist to contact you as soon as possible.</p>
-          <a href="#contact" class="js-phone-link phone-cta mt-10 flex items-center border-4 border-black bg-black text-white px-6 sm:px-8 py-6 font-black uppercase text-base sm:text-xl tracking-wider hover:bg-white hover:text-black w-full sm:w-[540px] sm:max-w-full justify-center" aria-label="Request a drainage call-back">Request Call Back</a>
+          <a href="tel:+447549731381" class="js-phone-link phone-cta mt-10 flex items-center border-4 border-black bg-black text-white px-6 sm:px-8 py-6 font-black uppercase text-base sm:text-xl tracking-wider hover:bg-white hover:text-black w-full sm:w-[540px] sm:max-w-full justify-center" aria-label="Call now for drainage help">Call Now</a>
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="border-4 border-black bg-white px-4 py-3 text-center"><span class="font-black uppercase text-xs tracking-widest text-black">Tell Us The Issue</span></div>
             <div class="border-4 border-black bg-white px-4 py-3 text-center"><span class="font-black uppercase text-xs tracking-widest text-black">Add Your Postcode</span></div>
@@ -306,6 +307,7 @@
             <input type="hidden" name="form-name" value="drain-enquiry">
             <p class="honeypot-field"><label>Do not fill this out if you are human: <input name="bot-field" type="text"></label></p>
             <p id="form-success" class="form-success" role="status" tabindex="-1" hidden>Thanks. Your request has been sent and a local drainage specialist can contact you shortly.</p>
+            <p class="mb-5 text-sm font-black uppercase tracking-widest text-white">Prefer to call? <a href="tel:+447549731381" class="text-accent hover:text-white" aria-label="Call +44 7549 731381">+44 7549 731381</a></p>
             <div class="form-field"><label for="name">Name *</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name"></div>
             <div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></div>
             <div class="form-field"><label for="postcode">Postcode *</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required placeholder="E.g. HU1 1AA"></div>
@@ -367,6 +369,7 @@
       <div class="footer-cell">
         <a href="#top" aria-label="Hull Drain Response home" class="brand-wordmark brand-wordmark-dark inline-flex mb-6"><span class="brand-wordmark-top">Hull Drain</span><span class="brand-wordmark-bottom">Response</span></a>
         <p class="font-bold uppercase text-xs tracking-wide text-gray-400 leading-relaxed">Fast help for blocked drains, toilets and outside drains across Hull. Local enquiry route for sinks, sewage smells and nearby areas.</p>
+        <p class="mt-4 font-black uppercase text-xs tracking-widest text-gray-300">Phone: <a href="tel:+447549731381" class="text-accent hover:text-white" aria-label="Call +44 7549 731381">+44 7549 731381</a></p>
       </div>
       <div class="footer-cell">
         <div class="footer-heading">Links</div>
@@ -383,12 +386,12 @@
 </footer>
 
 <div class="mobile-sticky-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-black border-t-4 border-orange-500 px-3 pt-3" role="region" aria-label="Quick contact">
-  <div class="flex items-center gap-3"><span class="text-white font-black uppercase text-xs tracking-widest">Blocked drain?</span><a href="#contact" class="js-phone-link flex-1 text-center border-4 border-orange-500 bg-orange-500 text-black font-black uppercase text-sm tracking-widest px-4 py-4" aria-label="Get drain help now">Get Drain Help</a></div>
+  <div class="flex items-center gap-3"><span class="text-white font-black uppercase text-xs tracking-widest">Blocked drain?</span><a href="tel:+447549731381" class="js-phone-link flex-1 text-center border-4 border-orange-500 bg-orange-500 text-black font-black uppercase text-sm tracking-widest px-4 py-4" aria-label="Call now on +44 7549 731381">Call Now<span class="block text-xs tracking-normal">+44 7549 731381</span></a></div>
 </div>
 
 <script>
-  const PHONE_DISPLAY = "[PHONE_PLACEHOLDER]";
-  const PHONE_TEL = "";
+  const PHONE_DISPLAY = "+44 7549 731381";
+  const PHONE_TEL = "+447549731381";
 
   document.querySelectorAll("[data-phone-display]").forEach((element) => {
     element.textContent = PHONE_DISPLAY;

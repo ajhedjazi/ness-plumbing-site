@@ -10,14 +10,14 @@ Static local lead-generation landing page for urgent blocked drain enquiries acr
 
 ## Phone Setup
 
-Before launch, update these two constants near the end of `index.html`:
+The business phone number is configured near the end of `index.html`:
 
 ```js
-const PHONE_DISPLAY = "[PHONE_PLACEHOLDER]";
-const PHONE_TEL = "";
+const PHONE_DISPLAY = "+44 7549 731381";
+const PHONE_TEL = "+447549731381";
 ```
 
-Use a readable number for `PHONE_DISPLAY` and the dialable international or national format for `PHONE_TEL`.
+Use a readable number for `PHONE_DISPLAY` and the dialable international format for `PHONE_TEL`.
 
 ## Form Setup
 
