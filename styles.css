@@ -314,6 +314,9 @@ header.border-b-4,
 
 /* Hero */
 .hero-drain-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-height: calc(100vh - 132px);
   background:
     radial-gradient(circle at 14% 25%, rgba(249, 115, 22, 0.12) 0 2px, transparent 3px 100%),
@@ -321,7 +324,43 @@ header.border-b-4,
   background-size: 34px 34px, auto;
 }
 
+.hero-drain-bg::before,
+.hero-drain-bg::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-drain-bg::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 66%, rgba(249, 115, 22, 0.12) 66% calc(66% + 2px), transparent calc(66% + 2px)),
+    linear-gradient(0deg, transparent 0 34%, rgba(255, 255, 255, 0.08) 34% calc(34% + 2px), transparent calc(34% + 2px)),
+    radial-gradient(circle at 72% 34%, transparent 0 45px, rgba(255, 255, 255, 0.11) 46px 48px, transparent 49px),
+    radial-gradient(circle at 82% 64%, transparent 0 34px, rgba(249, 115, 22, 0.14) 35px 37px, transparent 38px);
+  opacity: 0.72;
+}
+
+.hero-drain-bg::after {
+  width: clamp(240px, 38vw, 470px);
+  aspect-ratio: 1;
+  top: clamp(120px, 16vw, 190px);
+  right: clamp(-170px, -12vw, -72px);
+  border: var(--global-border-width) solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(from 10deg, rgba(255, 255, 255, 0.18) 0deg 7deg, transparent 7deg 17deg),
+    radial-gradient(circle, transparent 0 36%, rgba(4, 16, 38, 0.45) 37% 56%, transparent 57%);
+  box-shadow:
+    inset 0 0 0 24px rgba(249, 115, 22, 0.08),
+    inset 0 0 0 58px rgba(255, 255, 255, 0.06);
+  opacity: 0.42;
+}
+
 .hero-layout {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: stretch;
@@ -343,11 +382,27 @@ header.border-b-4,
 }
 
 .hero-panels {
+  position: relative;
+  overflow: hidden;
   min-width: 0;
   border: var(--global-border-width) solid #fff;
 }
 
+.hero-panels::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 0 44%, rgba(255, 255, 255, 0.12) 44% calc(44% + 2px), transparent calc(44% + 2px)),
+    linear-gradient(45deg, transparent 0 62%, rgba(249, 115, 22, 0.16) 62% calc(62% + 2px), transparent calc(62% + 2px));
+  opacity: 0.62;
+  z-index: 1;
+}
+
 .hero-panel {
+  position: relative;
+  z-index: 2;
   min-height: 168px;
   padding: var(--card-pad-desktop) !important;
   border-bottom-width: var(--global-border-width) !important;
@@ -415,10 +470,30 @@ header.border-b-4,
 }
 
 .service-icon {
-  min-height: 3.25rem;
+  width: 4.45rem;
+  height: 4.45rem;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.1rem;
-  font-size: 2.55rem;
+  border: var(--global-border-width) solid var(--accent-orange);
+  background:
+    linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(26, 74, 131, 0.04)),
+    var(--bg-offwhite);
+  color: var(--accent-orange);
+  font-size: 0;
   line-height: 1;
+}
+
+.service-svg {
+  width: 2.85rem;
+  height: 2.85rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
 }
 
 .service-link {
@@ -435,6 +510,12 @@ header.border-b-4,
 
 .service-card:hover .service-link {
   border-color: #fff;
+}
+
+.service-card:hover .service-icon {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
 }
 
 .action-card {
@@ -613,6 +694,69 @@ header.border-b-4,
   max-width: 470px;
 }
 
+.coverage-visual {
+  min-height: clamp(150px, 22vw, 220px);
+  margin-bottom: clamp(20px, 3vw, 28px);
+  overflow: hidden;
+  border: var(--global-border-width) solid var(--primary-text);
+  background:
+    linear-gradient(rgba(247, 247, 244, 0.9), rgba(247, 247, 244, 0.9)),
+    linear-gradient(90deg, rgba(4, 16, 38, 0.12) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(4, 16, 38, 0.12) 1px, transparent 1px);
+  background-size: auto, 38px 38px, 38px 38px;
+}
+
+.coverage-map-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.coverage-river {
+  fill: none;
+  stroke: var(--secondary-blue);
+  stroke-linecap: round;
+  stroke-width: 34;
+  opacity: 0.16;
+}
+
+.coverage-route {
+  fill: none;
+  stroke: var(--primary-text);
+  stroke-linecap: square;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.coverage-route-secondary {
+  stroke: var(--secondary-blue);
+  stroke-dasharray: 14 12;
+  opacity: 0.8;
+}
+
+.coverage-block {
+  fill: rgba(249, 115, 22, 0.18);
+  stroke: var(--accent-orange);
+  stroke-width: 3;
+}
+
+.coverage-block-light {
+  fill: rgba(26, 74, 131, 0.12);
+  stroke: var(--secondary-blue);
+}
+
+.coverage-pin {
+  fill: var(--accent-orange);
+  stroke: var(--primary-text);
+  stroke-width: 4;
+}
+
+.coverage-pin-light {
+  fill: var(--bg-offwhite);
+  stroke: var(--accent-orange);
+}
+
 /* Contact */
 .contact-layout {
   display: grid;
@@ -621,8 +765,33 @@ header.border-b-4,
 }
 
 .contact-copy {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-width: 0;
   padding-block: var(--section-py);
+}
+
+.contact-copy::after {
+  content: "";
+  position: absolute;
+  right: clamp(-52px, -5vw, -20px);
+  bottom: clamp(24px, 8vw, 88px);
+  width: clamp(180px, 26vw, 320px);
+  height: clamp(96px, 16vw, 190px);
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0 30px, rgba(7, 16, 33, 0.18) 30px 34px, transparent 34px),
+    linear-gradient(0deg, transparent 0 30px, rgba(7, 16, 33, 0.18) 30px 34px, transparent 34px),
+    radial-gradient(circle at 80% 22%, transparent 0 34px, rgba(7, 16, 33, 0.2) 35px 38px, transparent 39px);
+  background-size: 64px 64px, 64px 64px, auto;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.contact-copy > * {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-copy .grid .border-4 {
@@ -630,8 +799,30 @@ header.border-b-4,
 }
 
 .contact-form-panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-width: 0;
   padding: var(--section-py-tight) var(--card-pad-mobile);
+}
+
+.contact-form-panel::before {
+  content: "";
+  position: absolute;
+  inset: clamp(18px, 4vw, 42px);
+  pointer-events: none;
+  border: var(--global-border-width) solid rgba(249, 115, 22, 0.24);
+  background:
+    linear-gradient(90deg, transparent 0 48%, rgba(249, 115, 22, 0.14) 48% calc(48% + 2px), transparent calc(48% + 2px)),
+    linear-gradient(0deg, transparent 0 58%, rgba(255, 255, 255, 0.08) 58% calc(58% + 2px), transparent calc(58% + 2px)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 26px);
+  opacity: 0.82;
+  z-index: 0;
+}
+
+.contact-form-panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .lead-form {
@@ -714,10 +905,65 @@ header.border-b-4,
   padding: clamp(28px, 5vw, 56px);
 }
 
+.bottom-cta-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.bottom-cta-accent::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -46px;
+  width: 190px;
+  aspect-ratio: 1;
+  border: var(--global-border-width) solid rgba(7, 16, 33, 0.32);
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(rgba(7, 16, 33, 0.26) 0deg 8deg, transparent 8deg 18deg),
+    radial-gradient(circle, transparent 0 42%, rgba(7, 16, 33, 0.16) 43% 58%, transparent 59%);
+  opacity: 0.48;
+}
+
+.bottom-cta-accent > * {
+  position: relative;
+  z-index: 1;
+}
+
 .bottom-cta-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.bottom-cta-copy > a {
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+}
+
+.cta-icon,
+.footer-contact-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.cta-icon svg,
+.footer-contact-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 /* Footer */
@@ -773,6 +1019,19 @@ header.border-b-4,
 .footer-link:hover,
 .footer-legal-link:hover {
   color: #fff;
+}
+
+.footer-phone {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.footer-contact-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--accent-orange);
 }
 
 .mobile-sticky-cta {
